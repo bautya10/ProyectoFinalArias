@@ -1,0 +1,89 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(9,20,125);
+  background: radial-gradient(90deg, rgba(9,20,125,1) 0%, rgba(4,8,110,1) 15%, rgba(21,29,184,1) 45%, rgba(65,103,198,1) 96%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgb(245,245,245);
+  background: radial-gradient(circle, rgba(240,240,240,1) 40%, rgba(245,245,245,1) 41%, rgba(249,249,255,1) 90%, rgba(214,214,214,1) 100%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 3px 59px -10px rgba(0,0,0,0.75);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+select, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input{
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.swap-button {
+  background-color: #0968cf;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  width: 40px;
+  height: 40px;
+  rotate: 90deg;
+}
+
+.swap-button:hover {
+  background-color: #0056b3;
+}
+
+.swap-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#convert-btn {
+  margin-top: 30px;
+}
+
