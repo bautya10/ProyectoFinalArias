@@ -30,13 +30,14 @@ function loadCurrencies() {
     const fromSelect = document.getElementById("from");
     const toSelect = document.getElementById("to");
 
-    Object.keys(exchangeRates).forEach(currency => {
+    const options = Object.keys(exchangeRates).map(currency => {
         const option = new Option(currency.toUpperCase(), currency);
         fromSelect.appendChild(option.cloneNode(true));
-        toSelect.appendChild(option);
+        return option;
     });
 
-    // Inicializa Select2 en los elementos <select>
+    options.forEach(option => toSelect.appendChild(option));
+
     $('.currency-select').select2();
 }
 
@@ -47,7 +48,7 @@ function convertCurrency(amount, from, to) {
     return null;
 }
 
-document.getElementById("converter-form").addEventListener("submit", function (e) {
+document.getElementById("converter-form").addEventListener("submit", async function (e) {
     e.preventDefault();
     
     const amount = parseFloat(document.getElementById("amount").value);
@@ -76,7 +77,6 @@ document.getElementById("swap-button").addEventListener("click", function () {
     fromSelect.value = toValue;
     toSelect.value = fromValue;
 
-    // Actualiza Select2 después del intercambio de valores
     $('#from').trigger('change');
     $('#to').trigger('change');
 });
